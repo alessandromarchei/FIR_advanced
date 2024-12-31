@@ -1,0 +1,21 @@
+#----------------------------------------------------------
+# snapshots/.snaprc_FIR_PIPE1 : snapshot resource file                          
+# label = FIR_PIPE1                                      
+#----------------------------------------------------------
+set tmpstr ""
+set tmpbar ""
+lappend tmpstr "dir" $sdir
+lappend tmpstr "label" FIR_PIPE1
+lappend tmpstr "fplan" $sdir/ss_FIR_PIPE1.fplan.gif
+lappend tmpstr "amoeba" $sdir/ss_FIR_PIPE1.amoeba.gif
+lappend tmpstr "place" $sdir/ss_FIR_PIPE1.place.gif
+lappend tmpstr "trgGlbOverflowPctH" 0
+lappend tmpstr "trgGlbOverflowPctV" 0
+lappend tmpbar "Congestion"
+lappend tmpstr "Congestion" 0
+lappend tmpbar WNS
+lappend tmpstr WNS 0.576
+lappend tmpbar TNS
+lappend tmpstr TNS 0.0
+lappend tmpbar Overlap
+lappend tmpstr Overlap 0

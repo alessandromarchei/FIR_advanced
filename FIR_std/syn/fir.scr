@@ -1,0 +1,41 @@
+exec mkdir -p reports
+exec mkdir -p netlist
+
+analyze -f vhdl -lib WORK FFD.vhd 
+analyze -f vhdl -lib WORK REG.vhd 
+analyze -f vhdl -lib WORK FIR.vhd
+
+set power_preserve_rtl_hier_names true
+
+#set_wire_load_model -name 5K_hvratio_1_4
+
+elaborate FIR -arch structural -lib WORK
+
+
+#Forces a clock of period Period connected to the input port CLK (remember to run the procedure again in order to set the clock constraint to the value specified on the first timing report, then synthesize again in order to get the respective area)#
+create_clock -name CLK -period 3.0 CLK
+set_dont_touch_network CLK
+set_clock_uncertainty 0.07 [get_clocks CLK]
+set_input_delay 0.5 -max -clock CLK [remove_from_collection [all_inputs] CLK]
+set_output_delay 0.5 -max -clock CLK [all_outputs]
+
+set OLOAD [load_of NangateOpenCellLibrary_typical_ecsm.lib/BUF_X4/A]
+set_load $OLOAD [all_outputs]
+
+compile
+#command for clock gating
+compile -gate_clock
+
+#REPORTS and OUTPUT NETLISTS
+report_timing > reports/FIR_time.rpt
+report_area > reports/FIR_area.rpt
+report_power > reports/FIR_power.rpt
+#First we ungroup the cells to flatten the hierarchy as follows:
+ungroup -all -flatten
+change_names -hierarchy -rules verilog
+write_sdf netlist/FIR.sdf
+write -f verilog -hierarchy -output netlist/FIR.v
+write_sdc netlist/FIR.sdc
+
+
+

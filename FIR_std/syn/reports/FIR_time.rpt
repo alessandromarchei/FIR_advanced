@@ -1,0 +1,99 @@
+
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_1
+Version: S-2021.06-SP4
+Date   : Mon Nov 13 11:29:58 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: U_reg_8/reg_reg[5]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DOUT_reg/reg_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_1              5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  U_reg_8/reg_reg[5]/CK (DFFR_X2)                         0.00       0.00 r
+  U_reg_8/reg_reg[5]/Q (DFFR_X2)                          0.18       0.18 r
+  U_reg_8/data_out[5] (REG_NBIT14_15)                     0.00       0.18 r
+  mult_111_G10/a[5] (FIR_1_DW_mult_tc_2)                  0.00       0.18 r
+  mult_111_G10/U570/ZN (INV_X1)                           0.05       0.23 f
+  mult_111_G10/U425/ZN (XNOR2_X1)                         0.06       0.29 r
+  mult_111_G10/U422/ZN (NAND2_X2)                         0.07       0.36 f
+  mult_111_G10/U728/ZN (OAI22_X1)                         0.08       0.44 r
+  mult_111_G10/U106/S (HA_X1)                             0.08       0.52 r
+  mult_111_G10/U105/S (FA_X1)                             0.12       0.64 f
+  mult_111_G10/U475/ZN (NAND2_X1)                         0.03       0.68 r
+  mult_111_G10/U412/ZN (AND3_X2)                          0.06       0.73 r
+  mult_111_G10/U469/ZN (OAI222_X1)                        0.05       0.78 f
+  mult_111_G10/U416/ZN (AND2_X1)                          0.04       0.82 f
+  mult_111_G10/U418/ZN (NOR3_X1)                          0.07       0.89 r
+  mult_111_G10/U738/ZN (OAI222_X1)                        0.06       0.95 f
+  mult_111_G10/U710/ZN (INV_X1)                           0.04       0.99 r
+  mult_111_G10/U668/ZN (OAI222_X1)                        0.05       1.03 f
+  mult_111_G10/U778/ZN (INV_X1)                           0.03       1.07 r
+  mult_111_G10/U777/ZN (OAI222_X1)                        0.05       1.12 f
+  mult_111_G10/U742/ZN (NAND2_X1)                         0.03       1.16 r
+  mult_111_G10/U420/ZN (AND3_X2)                          0.06       1.21 r
+  mult_111_G10/U775/ZN (OAI222_X1)                        0.05       1.26 f
+  mult_111_G10/U450/ZN (NAND2_X1)                         0.03       1.30 r
+  mult_111_G10/U447/ZN (AND3_X1)                          0.05       1.35 r
+  mult_111_G10/U429/ZN (OR2_X1)                           0.04       1.39 r
+  mult_111_G10/U490/ZN (NAND3_X1)                         0.04       1.42 f
+  mult_111_G10/U427/ZN (NAND2_X1)                         0.03       1.45 r
+  mult_111_G10/U421/ZN (AND3_X2)                          0.05       1.51 r
+  mult_111_G10/U776/ZN (OAI222_X1)                        0.05       1.56 f
+  mult_111_G10/U740/ZN (NAND2_X1)                         0.04       1.59 r
+  mult_111_G10/U705/ZN (AND3_X1)                          0.05       1.65 r
+  mult_111_G10/U430/ZN (OR2_X1)                           0.03       1.68 r
+  mult_111_G10/U499/ZN (NAND3_X1)                         0.04       1.71 f
+  mult_111_G10/U11/CO (FA_X1)                             0.10       1.81 f
+  mult_111_G10/U419/ZN (XNOR2_X1)                         0.07       1.88 f
+  mult_111_G10/product[20] (FIR_1_DW_mult_tc_2)           0.00       1.88 f
+  add_9_root_add_0_root_add_121_G9/U1_7/CO (FA_X1)        0.10       1.98 f
+  U251/ZN (OAI21_X1)                                      0.04       2.03 r
+  U249/ZN (OAI21_X1)                                      0.03       2.06 f
+  U248/ZN (OR2_X1)                                        0.05       2.11 f
+  U247/ZN (AOI22_X1)                                      0.05       2.17 r
+  U217/ZN (INV_X1)                                        0.03       2.20 f
+  U232/ZN (OR2_X1)                                        0.06       2.26 f
+  U188/ZN (AOI22_X1)                                      0.07       2.33 r
+  U242/ZN (AND2_X1)                                       0.06       2.39 r
+  U122/ZN (OAI22_X1)                                      0.04       2.43 f
+  U139/ZN (NAND2_X1)                                      0.03       2.46 r
+  U141/ZN (NAND3_X1)                                      0.03       2.49 f
+  add_9_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.14       2.63 r
+  add_3_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.12       2.75 f
+  add_0_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.14       2.89 r
+  DOUT_reg/data_in[13] (REG_NBIT14_1)                     0.00       2.89 r
+  DOUT_reg/reg_reg[13]/D (DFFR_X1)                        0.01       2.90 r
+  data arrival time                                                  2.90
+
+  clock CLK (rise edge)                                   3.00       3.00
+  clock network delay (ideal)                             0.00       3.00
+  clock uncertainty                                      -0.07       2.93
+  DOUT_reg/reg_reg[13]/CK (DFFR_X1)                       0.00       2.93 r
+  library setup time                                     -0.03       2.90
+  data required time                                                 2.90
+  --------------------------------------------------------------------------
+  data required time                                                 2.90
+  data arrival time                                                 -2.90
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

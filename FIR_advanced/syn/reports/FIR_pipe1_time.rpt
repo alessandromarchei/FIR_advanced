@@ -1,0 +1,93 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR_PIPE1
+Version: S-2021.06-SP4
+Date   : Mon Nov 13 15:33:29 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: B_8/reg_reg[3]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: x3k2_pipe1_i_8/reg_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR_PIPE1          5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  B_8/reg_reg[3]/CK (DFFR_X1)                             0.00       0.00 r
+  B_8/reg_reg[3]/Q (DFFR_X1)                              0.10       0.10 r
+  B_8/data_out[3] (REG_NBIT14_21)                         0.00       0.10 r
+  U123/Z (BUF_X1)                                         0.15       0.25 r
+  mult_156_G9/a[3] (FIR_PIPE1_DW_mult_tc_17)              0.00       0.25 r
+  mult_156_G9/U671/ZN (INV_X1)                            0.04       0.29 f
+  mult_156_G9/U451/Z (BUF_X2)                             0.05       0.34 f
+  mult_156_G9/U433/ZN (INV_X1)                            0.12       0.46 r
+  mult_156_G9/U687/ZN (XNOR2_X1)                          0.08       0.55 r
+  mult_156_G9/U691/ZN (OAI22_X1)                          0.04       0.58 f
+  mult_156_G9/U108/S (HA_X1)                              0.08       0.66 f
+  mult_156_G9/U704/ZN (AOI222_X1)                         0.11       0.77 r
+  mult_156_G9/U702/ZN (INV_X1)                            0.03       0.80 f
+  mult_156_G9/U442/ZN (AOI222_X1)                         0.09       0.89 r
+  mult_156_G9/U701/ZN (INV_X1)                            0.03       0.92 f
+  mult_156_G9/U697/ZN (AOI222_X1)                         0.09       1.01 r
+  mult_156_G9/U712/ZN (INV_X1)                            0.03       1.04 f
+  mult_156_G9/U710/ZN (AOI222_X1)                         0.09       1.13 r
+  mult_156_G9/U709/ZN (INV_X1)                            0.03       1.16 f
+  mult_156_G9/U705/ZN (AOI222_X1)                         0.09       1.25 r
+  mult_156_G9/U703/ZN (INV_X1)                            0.03       1.28 f
+  mult_156_G9/U700/ZN (AOI222_X1)                         0.09       1.37 r
+  mult_156_G9/U699/ZN (INV_X1)                            0.03       1.40 f
+  mult_156_G9/U698/ZN (AOI222_X1)                         0.09       1.50 r
+  mult_156_G9/U695/ZN (INV_X1)                            0.03       1.52 f
+  mult_156_G9/U694/ZN (AOI222_X1)                         0.09       1.62 r
+  mult_156_G9/U714/ZN (INV_X1)                            0.03       1.64 f
+  mult_156_G9/U708/ZN (AOI222_X1)                         0.09       1.74 r
+  mult_156_G9/U707/ZN (INV_X1)                            0.03       1.76 f
+  mult_156_G9/U693/ZN (AOI222_X1)                         0.11       1.87 r
+  mult_156_G9/U692/ZN (OAI222_X1)                         0.07       1.94 f
+  mult_156_G9/U696/ZN (AOI222_X1)                         0.10       2.04 r
+  mult_156_G9/U706/ZN (INV_X1)                            0.03       2.06 f
+  mult_156_G9/U419/ZN (AOI222_X1)                         0.11       2.17 r
+  mult_156_G9/U711/ZN (OAI222_X1)                         0.07       2.24 f
+  mult_156_G9/U716/ZN (AOI222_X1)                         0.11       2.35 r
+  mult_156_G9/U715/ZN (OAI222_X1)                         0.07       2.42 f
+  mult_156_G9/U11/CO (FA_X1)                              0.10       2.51 f
+  mult_156_G9/U10/CO (FA_X1)                              0.09       2.60 f
+  mult_156_G9/U9/CO (FA_X1)                               0.09       2.69 f
+  mult_156_G9/U8/CO (FA_X1)                               0.09       2.79 f
+  mult_156_G9/U7/CO (FA_X1)                               0.09       2.88 f
+  mult_156_G9/U6/CO (FA_X1)                               0.09       2.97 f
+  mult_156_G9/U5/CO (FA_X1)                               0.09       3.06 f
+  mult_156_G9/U4/S (FA_X1)                                0.13       3.19 r
+  mult_156_G9/product[26] (FIR_PIPE1_DW_mult_tc_17)       0.00       3.19 r
+  x3k2_pipe1_i_8/data_in[13] (REG_NBIT15_7)               0.00       3.19 r
+  x3k2_pipe1_i_8/reg_reg[13]/D (DFFR_X1)                  0.01       3.20 r
+  data arrival time                                                  3.20
+
+  clock CLK (rise edge)                                   3.30       3.30
+  clock network delay (ideal)                             0.00       3.30
+  clock uncertainty                                      -0.07       3.23
+  x3k2_pipe1_i_8/reg_reg[13]/CK (DFFR_X1)                 0.00       3.23 r
+  library setup time                                     -0.03       3.20
+  data required time                                                 3.20
+  --------------------------------------------------------------------------
+  data required time                                                 3.20
+  data arrival time                                                 -3.20
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1

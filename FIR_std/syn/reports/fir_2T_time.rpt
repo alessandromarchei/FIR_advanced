@@ -1,0 +1,99 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : FIR
+Version: S-2021.06-SP4
+Date   : Mon Nov 13 10:59:23 2023
+****************************************
+
+Operating Conditions: typical   Library: NangateOpenCellLibrary
+Wire Load Model Mode: top
+
+  Startpoint: U_reg_0/reg_reg[1]
+              (rising edge-triggered flip-flop clocked by CLK)
+  Endpoint: DOUT_reg/reg_reg[13]
+            (rising edge-triggered flip-flop clocked by CLK)
+  Path Group: CLK
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  FIR                5K_hvratio_1_1        NangateOpenCellLibrary
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock CLK (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  U_reg_0/reg_reg[1]/CK (DFFR_X1)                         0.00       0.00 r
+  U_reg_0/reg_reg[1]/Q (DFFR_X1)                          0.21       0.21 r
+  U_reg_0/data_out[1] (REG_NBIT14_0)                      0.00       0.21 r
+  mult_111_G2/a[1] (FIR_DW_mult_tc_10)                    0.00       0.21 r
+  mult_111_G2/U702/Z (XOR2_X1)                            0.11       0.32 r
+  mult_111_G2/U448/ZN (INV_X1)                            0.07       0.39 f
+  mult_111_G2/U569/ZN (NAND2_X1)                          0.12       0.52 r
+  mult_111_G2/U572/ZN (OAI22_X1)                          0.06       0.58 f
+  mult_111_G2/U108/S (HA_X1)                              0.08       0.66 f
+  mult_111_G2/U450/ZN (AOI222_X1)                         0.11       0.77 r
+  mult_111_G2/U449/ZN (INV_X1)                            0.03       0.80 f
+  mult_111_G2/U447/ZN (AOI222_X1)                         0.09       0.89 r
+  mult_111_G2/U446/ZN (INV_X1)                            0.03       0.92 f
+  mult_111_G2/U445/ZN (AOI222_X1)                         0.09       1.01 r
+  mult_111_G2/U444/ZN (INV_X1)                            0.03       1.04 f
+  mult_111_G2/U432/ZN (AOI222_X1)                         0.09       1.14 r
+  mult_111_G2/U431/ZN (INV_X1)                            0.03       1.16 f
+  mult_111_G2/U430/ZN (AOI222_X1)                         0.09       1.26 r
+  mult_111_G2/U429/ZN (INV_X1)                            0.03       1.28 f
+  mult_111_G2/U436/ZN (AOI222_X1)                         0.09       1.38 r
+  mult_111_G2/U435/ZN (INV_X1)                            0.03       1.40 f
+  mult_111_G2/U434/ZN (AOI222_X1)                         0.09       1.50 r
+  mult_111_G2/U433/ZN (INV_X1)                            0.03       1.52 f
+  mult_111_G2/U424/ZN (AOI222_X1)                         0.09       1.62 r
+  mult_111_G2/U423/ZN (INV_X1)                            0.03       1.65 f
+  mult_111_G2/U422/ZN (AOI222_X1)                         0.09       1.74 r
+  mult_111_G2/U421/ZN (INV_X1)                            0.03       1.77 f
+  mult_111_G2/U428/ZN (AOI222_X1)                         0.09       1.86 r
+  mult_111_G2/U427/ZN (INV_X1)                            0.03       1.89 f
+  mult_111_G2/U426/ZN (AOI222_X1)                         0.09       1.98 r
+  mult_111_G2/U425/ZN (INV_X1)                            0.03       2.01 f
+  mult_111_G2/U413/ZN (AOI222_X1)                         0.09       2.10 r
+  mult_111_G2/U412/ZN (INV_X1)                            0.03       2.13 f
+  mult_111_G2/U411/ZN (AOI222_X1)                         0.11       2.23 r
+  mult_111_G2/U415/ZN (OAI222_X1)                         0.07       2.30 f
+  mult_111_G2/U414/ZN (AOI222_X1)                         0.11       2.41 r
+  mult_111_G2/U418/ZN (OAI222_X1)                         0.07       2.48 f
+  mult_111_G2/U11/CO (FA_X1)                              0.10       2.58 f
+  mult_111_G2/U10/CO (FA_X1)                              0.09       2.67 f
+  mult_111_G2/U9/CO (FA_X1)                               0.09       2.76 f
+  mult_111_G2/U8/CO (FA_X1)                               0.09       2.85 f
+  mult_111_G2/U7/CO (FA_X1)                               0.09       2.94 f
+  mult_111_G2/U6/CO (FA_X1)                               0.09       3.03 f
+  mult_111_G2/U5/CO (FA_X1)                               0.09       3.12 f
+  mult_111_G2/U458/Z (XOR2_X1)                            0.07       3.19 f
+  mult_111_G2/U442/ZN (XNOR2_X1)                          0.06       3.25 f
+  mult_111_G2/product[26] (FIR_DW_mult_tc_10)             0.00       3.25 f
+  add_7_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.13       3.38 f
+  add_2_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.15       3.53 r
+  add_1_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.12       3.65 f
+  add_0_root_add_0_root_add_121_G9/U1_13/S (FA_X1)        0.14       3.80 r
+  DOUT_reg/data_in[13] (REG_NBIT14_1)                     0.00       3.80 r
+  DOUT_reg/reg_reg[13]/D (DFFR_X1)                        0.01       3.81 r
+  data arrival time                                                  3.81
+
+  clock CLK (rise edge)                                   6.00       6.00
+  clock network delay (ideal)                             0.00       6.00
+  clock uncertainty                                      -0.07       5.93
+  DOUT_reg/reg_reg[13]/CK (DFFR_X1)                       0.00       5.93 r
+  library setup time                                     -0.03       5.90
+  data required time                                                 5.90
+  --------------------------------------------------------------------------
+  data required time                                                 5.90
+  data arrival time                                                 -3.81
+  --------------------------------------------------------------------------
+  slack (MET)                                                        2.09
+
+
+1
