@@ -83,7 +83,7 @@ The standard version of the FIR filter is shown below:
 
 An example of the advanced architecture is shown below:
 
-![Advanced FIR version](docs/drawio/fir_adv_unfld.png)
+![Advanced FIR version](docs/drawio/FIR_adv_unfld.png)
 
 
 ---
